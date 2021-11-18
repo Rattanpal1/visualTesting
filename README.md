@@ -1,0 +1,2 @@
+# visualTesting
+VRT using BackstopJS
