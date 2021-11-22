@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCoreJTokenModelBinder" Version="1.0.0" />
+    <PackageReference Include="DirectoryManager" Version="2.1.1" />
+    <PackageReference Include="JmesPath.Net" Version="1.0.153" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="16.170.0" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+    <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    <PackageReference Include="OpenQA.Selenium.Chrome.ChromeDriverExtensions" Version="1.2.0" />
+    <PackageReference Include="PathExtension.GetAvailableFileName" Version="1.0.2" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="96.0.4664.4500" />
+	<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+	<PackageReference Include="ExtentReports" Version="4.1.0" />
+	<PackageReference Include="Interop.UIAutomationClient" Version="10.19041.0" />
+  </ItemGroup>
+</Project>

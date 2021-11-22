@@ -1,0 +1,128 @@
+{
+“_from”: “BackstopJS”,
+“_id”: “BackstopJS@3.2.16”,
+“_inBundle”: false,
+“_integrity”: “sha512-VPzXZ72lnnug5PcG6W97tShEw32+TrCJiWdM00PZw0IXZ/hYRjQ1LFwVx6qDi1hZEZBIRbT2GQfBbytvtsEfVg==”,
+“_location”: “/BackstopJS”,
+“_phantomChildren”: {},
+“_requested”: {
+“type”: “tag”,
+“registry”: true,
+“raw”: “BackstopJS”,
+“name”: “BackstopJS”,
+“escapedName”: “BackstopJS”,
+“rawSpec”: “”,
+“saveSpec”: null,
+“fetchSpec”: “latest”
+},
+“_requiredBy”: [
+“#USER”
+],
+“_resolved”: “https://registry.npmjs.org/backstopjs/-/backstopjs-3.2.16.tgz",
+“_shasum”: “c56cdff141b50eda574297f50cb5462e3ff78006”,
+“_spec”: “backstopjs”,
+“_where”: “C:\\Program Files\\BackstopJS”,
+“author”: {
+“name”: “https://github.com/garris/BackstopJS/graphs/contributors"
+},
+“bin”: {
+“backstop”: “./mycliindex.js”
+},
+“bugs”: {
+“url”: “https://github.com/garris/backstopjs/issues"
+},
+“bundleDependencies”: false,
+“dependencies”: {
+“backstop-twentytwenty”: “¹.0.4”,
+“casperjs”: “¹.1.0-beta5”,
+“chalk”: “¹.1.3”,
+“chromy”: “0.5.11”,
+“fs-extra”: “⁰.30.0”,
+“jump.js”: “¹.0.2”,
+“junitwriter”: “~0.3.1”,
+“lodash”: “⁴.17.4”,
+“minimist”: “¹.2.0”,
+“node-resemble-js”: “⁰.2.0”,
+“object-hash”: “1.1.5”,
+“open”: “0.0.5”,
+“os”: “⁰.1.1”,
+“p-map”: “¹.1.1”,
+“path”: “⁰.12.7”,
+“phantomjs-prebuilt”: “².1.7”,
+“puppeteer”: “¹.2.0-next.1523485686787”,
+“react”: “¹⁵.6.1”,
+“react-dom”: “¹⁵.6.1”,
+“react-modal”: “³.0.3”,
+“react-redux”: “⁵.0.6”,
+“react-sticky”: “⁶.0.1”,
+“react-toggle-button”: “².1.0”,
+“redux”: “³.7.2”,
+“sinon”: “¹.17.7”,
+“styled-components”: “².1.2”,
+“temp”: “⁰.8.3”,
+“webpack”: “³.5.6”,
+“webpack-dev-server”: “².7.1”
+},
+“deprecated”: false,
+“description”: “BackstopJS: Catch CSS curveballs.”,
+“devDependencies”: {
+“assert”: “¹.4.1”,
+“babel-core”: “⁶.26.0”,
+“babel-loader”: “⁷.1.2”,
+“babel-preset-es2015”: “⁶.24.1”,
+“babel-preset-react”: “⁶.24.1”,
+“eslint”: “³.3.0”,
+“eslint-config-semistandard”: “⁷.0.0-beta.0”,
+“eslint-config-standard”: “⁶.0.0”,
+“eslint-plugin-promise”: “³.3.0”,
+“eslint-plugin-react”: “⁷.7.0”,
+“eslint-plugin-standard”: “².0.0”,
+“file-loader”: “⁰.11.2”,
+“gulp”: “³.9.1”,
+“lint-staged”: “⁴.3.0”,
+“mocha”: “¹.21.5”,
+“mockery”: “¹.4.0”,
+“prettier”: “¹.7.4”,
+“prettier-eslint-cli”: “⁴.7.0”,
+“url-loader”: “⁰.5.9”
+},
+“homepage”: “https://github.com/garris/backstopjs#readme",
+“license”: “MIT”,
+“lint-staged”: {
+“compare/src/**/*.js”: [
+“node_modules/.bin/prettier — single-quote — write”,
+“git add”
+]
+},
+“main”: “./myrunner.js”,
+“name”: “BackstopJS”,
+“repository”: {
+“type”: “git”,
+“url”: “git+https://github.com/garris/backstopjs.git"
+},
+“scripts”: {
+“build-and-copy-report-bundle”: “npm run build-compare; npm run copy-report-bundle”,
+“build-compare”: “webpack — config ./compare/webpack.config.js”,
+“copy-report-bundle”: “cp compare/output/index_bundle.js test/configs/backstop_data/html_report/”,
+“dev-compare”: “webpack-dev-server — content-base ./compare/output — config ./compare/webpack.config.js”,
+“echo”: “node ./index.js echo”,
+“format”: “prettier-eslint — write \”compare/src/**/*.js\””,
+“genConfig”: “node ./index.js genConfig”,
+“init”: “node ./index.js init”,
+“integration-test”: “rm -rf newdir && mkdir newdir && cd newdir && node ../cli/index.js genConfig && node ../cli/index.js reference && node ../cli/index.js test && node -e \”require(‘../’)(‘test’)\””,
+“kill-zombies”: “pkill -f \”(chrome)?( — headless)\””,
+“lint”: “npm run lint-web — — fix && npm run lint-node — — fix”,
+“lint-ci”: “npm run lint-web && npm run lint-node”,
+“lint-node”: “eslint — env node core/*.js core/**/*.js cli/*.js cli/**/*.js capture/*.js capture/**/*.js”,
+“lint-web”: “eslint — env browser compare/*.js compare/src/**/*.js”,
+“openReport”: “node ./index.js openReport”,
+“precommit”: “lint-staged”,
+“reference”: “node ./cli/index.js reference”,
+“sanity-test”: “cd test/configs/; node ../../cli/index.js test”,
+“smoke-test”: “cd test/configs/; node ../../cli/index.js test — config=backstop_features”,
+“test”: “node ./index.js test”,
+“_report”: “node ./index.js _report”,
+“unit-test”: “mocha — reporter spec — recursive test/cli”
+},
+“version”: “3.2.16”
+}
