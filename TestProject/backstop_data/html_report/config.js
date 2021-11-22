@@ -3,14 +3,14 @@ report({
   "tests": [
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_BackstopJS_Homepage_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20211119-131529\\backstop_default_BackstopJS_Homepage_0_document_0_phone.png",
+            "reference": "..\\bitmaps_reference\\HomePage_Mobile.png",
+            "test": "..\\bitmaps_test\\20180525\\HomePage_Mobile.png",
         "selector": "document",
         "fileName": "backstop_default_BackstopJS_Homepage_0_document_0_phone.png",
         "label": "BackstopJS Homepage",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
-        "url": "https://garris.github.io/BackstopJS/",
+            "url": "https://www.amazon.com/",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "phone",

@@ -29,7 +29,7 @@ namespace TestProject
             newDriver.Manage().Window.Size = new Size(width, height); //We can either open browser to a viewport size or maximum
             try
             {
-                newDriver.Navigate().GoToUrl("https://www.google.com/");
+                newDriver.Navigate().GoToUrl("https://www.amazon.com/");
                 Thread.Sleep(1000);
                 //Take Screenshot and save to bitmaps_test/currentdate/
                 //Backstop requires a folder inside bitmaps_test for test image, other wise the report will fail.
@@ -82,8 +82,7 @@ namespace TestProject
                     reader.Dispose();
                     if (String.IsNullOrEmpty(data))
                     {
-                        root = new BackstopJson();
-                        //CompareConfig
+                        root = new BackstopJson(); //CompareConfig
                         var compareConfig = new CompareConfig();
                         var testPairs = new TestPair[1];
                         testPairs[0] = testPair;
@@ -112,6 +111,7 @@ namespace TestProject
                 }
             }
             Console.WriteLine($"[file:///{compareConfigFile} ]");
+            Console.WriteLine($"****************Test Ended***************");
         }
     }
 }
